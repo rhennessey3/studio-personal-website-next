@@ -7,6 +7,7 @@ import caseStudy from './caseStudy'
 import blogPost from './blogPost'
 import tag from './tag'
 import contactSubmission from './contactSubmission'
+import siteSettings from './siteSettings' // Import the new singleton schema
 
 // Object types
 import blockContent from './blockContent'
@@ -23,6 +24,7 @@ export const schemaTypes = [
   blogPost,
   tag,
   contactSubmission,
+  siteSettings, // Add the singleton to the exported array
 
   // Object types
   blockContent,
