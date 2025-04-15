@@ -8,7 +8,7 @@ import {schemaTypes} from './schemaTypes'
 import {CogIcon} from '@sanity/icons'
 
 // Define the singleton document types
-const singletonTypes = new Set(['siteSettings'])
+const singletonTypes = new Set(['siteSettings', 'aboutPage'])
 
 export default defineConfig({
   name: 'default',
@@ -33,6 +33,17 @@ export default defineConfig({
                 S.document()
                   .schemaType('siteSettings')
                   .documentId('siteSettings') // Use fixed document ID
+              ),
+            S.divider(),
+            // Singleton item for About Page
+            S.listItem()
+              .title('About Page')
+              .id('aboutPage')
+              // Optional: Add an icon if desired, e.g., .icon(UserIcon)
+              .child(
+                S.document()
+                  .schemaType('aboutPage')
+                  .documentId('aboutPage') // Use fixed document ID
               ),
             S.divider(),
             // Filter out the singleton type from the default list
