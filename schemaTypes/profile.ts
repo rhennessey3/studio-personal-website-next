@@ -36,7 +36,7 @@ export default defineType({
       title: 'Profile Image',
       type: 'image',
       options: {
-        hotspot: true, // Enables image cropping/positioning
+        hotspot: false, // Disable hotspot/cropping
       },
     }),
     defineField({

@@ -52,7 +52,7 @@ export default defineType({
     // corresponding React components to render them.
     defineArrayMember({
       type: 'image',
-      options: {hotspot: true},
+      options: {hotspot: false}, // Disable hotspot/cropping
     }),
     // Uncomment the following lines to enable code blocks
     // defineArrayMember({

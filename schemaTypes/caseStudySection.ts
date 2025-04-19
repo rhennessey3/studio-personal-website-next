@@ -32,7 +32,7 @@ export default defineType({
       type: 'image',
       description: 'Optional image to display alongside the text content for this section.',
       options: {
-        hotspot: true, // Recommended for images
+        hotspot: false, // Disable hotspot/cropping
       },
     }),
     defineField({
@@ -73,7 +73,7 @@ export default defineType({
               name: 'image',
               title: 'Image',
               type: 'image',
-              options: {hotspot: true},
+              options: {hotspot: false}, // Disable hotspot/cropping
               validation: (Rule) => Rule.required(), // Make image required per item
             }),
             defineField({
@@ -157,7 +157,7 @@ export default defineType({
       type: 'image',
       description: 'The image to display centered in the right column.',
       options: {
-        hotspot: true,
+        hotspot: false, // Disable hotspot/cropping
       },
       hidden: ({parent}) => parent?.layout !== 'twoColumnTextRowsImageRight',
     }),

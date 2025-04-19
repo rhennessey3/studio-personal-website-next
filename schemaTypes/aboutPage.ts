@@ -48,7 +48,7 @@ export default defineType({
         },
         {
           type: 'image', // Allow embedding images
-          options: {hotspot: true},
+          options: {hotspot: false}, // Disable hotspot/cropping
         },
       ],
     }),

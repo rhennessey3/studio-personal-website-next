@@ -38,7 +38,7 @@ export default defineType({
       title: 'Featured Image',
       type: 'image',
       options: {
-        hotspot: true,
+        hotspot: false, // Disable hotspot/cropping
       },
     }),
     defineField({
